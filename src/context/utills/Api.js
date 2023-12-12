@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://youtube138.p.rapidapi.com/auto-complete/";
+const BASE_URL = "https://youtube138.p.rapidapi.com";
 
 const options = {
     method: 'GET',
@@ -15,9 +15,9 @@ const options = {
     }
   };
 
-  const fetchDataFromApi=async(url)=>{
+  export const fetchDataFromApi=async(url)=>{
     const {data} = await axios.get(`${BASE_URL}/${url}`,options)
     return data;
 }
 
-  export default fetchDataFromApi;
+  
